@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blood Donation Event - Register to save lives!">
+    <title>Blood Donation Event</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+    <div class="navbar">
+        <div id="nav-logo-box">
+            <a href="#"><img src="logo.jpg" class="nav-logo" alt=""></a>
+        </div>            
+        <div>
+            <ul id="account-list">
+                <li><a href="user.html">Home</a></li>
+                <li><a href="donate.html" >Donate</a></li>
+                <li><a href="request.html" >Blood request</a></li>
+                <li><a href="event.html" class="active">Event</a></li>
+                <li><a href="index.html">Log out</a></li>
+                <a href="#" id= "close"><i class="fas fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="event.html" style="text-decoration: none; color: red; font-weight: 600;">Events</a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </div>
+  </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Register for the Blood Donation Event</h1>
+        <form action="#" method="post">
+            <div>
+                <label for="name">Full Name <span style="color: red;">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div>
+                <label for="email">Email <span style="color: red;">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div>
+                <label for="number">Phone Number <span style="color: red;">*</span></label>
+                <input type="tel" id="number" name="number" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+            </div>
+            <div>
+                <label for="event-id">Event ID <span style="color: red;">*</span></label>
+                <input type="text" id="event-id" name="event-id" placeholder="Enter the event ID" required>
+            </div>
+            <div>
+                <label for="address">Address <span style="color: red;">*</span></label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Additional information (optional)" rows="5"></textarea>
+            </div>
+            <button type="submit">Register Now</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
