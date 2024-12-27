@@ -144,5 +144,9 @@ header{
     .submit-btn:hover {
       background-color: #b80008;
     }
+    .submit-btn a{
+        text-decoration: none;
+        color: white;
+    } 
 
   
