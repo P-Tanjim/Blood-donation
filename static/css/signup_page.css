@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Spartan", sans-serif;
+}
+body {
+  width: 100%;
+}
+/* Navbar style */
+
+header {
+  z-index: 999;
+  position: relative;
+}
+.navbar {
+  height: 60px;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+  box-sizing: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+}
+
+#nav-logo-box {
+  height: 60px;
+  width: 80px;
+}
+.nav-logo {
+  height: 100%;
+  width: 100%;
+}
+#nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#nav-list li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+#nav-list li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+#nav-list li a:hover,
+#nav-list li a.active {
+  color: #e52c34;
+}
+#nav-list li a.active::after,
+#nav-list li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #e52c34;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+/* Sign in page style */
+
+#signin-page {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.signup-container {
+  background: #fff;
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group > div {
+  flex: 1 1 calc(50% - 10px);
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 60px;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #e00009;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #b80008;
+}
