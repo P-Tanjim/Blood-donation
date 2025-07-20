@@ -31,9 +31,9 @@ A web-based platform built with **Flask**, **MySQL**, **HTML**, **CSS**, and **J
 
 ---
 
-##  Screenshots
+##  Website
 
-
+https://p-tanjim.github.io/Blood-donation/
 
 ---
 
