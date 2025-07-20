@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Donation</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div id="nav-logo-box">
+          <a href="#"
+            ><img
+              src="{{ url_for('static', filename='image/logo.jpg') }}"
+              class="nav-logo"
+              alt=""
+          /></a>
+        </div>
+        <div>
+          <ul id="account-list">
+            <li><a href="{{ url_for('user') }}">Home</a></li>
+            <li><a href="{{ url_for('donate_user') }}">Donate</a></li>
+            <li>
+              <a href="{{ url_for('Request') }}" class="active"
+                >Blood request</a
+              >
+            </li>
+            <li><a href="{{ url_for('event') }}">Event</a></li>
+            <li><a href="{{ url_for('index') }}">Log out</a></li>
+            <a href="#" id="close"><i class="fas fa-times"></i></a>
+          </ul>
+        </div>
+        <div id="mobile">
+          <a
+            href="{{ url_for('Request') }}"
+            style="text-decoration: none; color: red; font-weight: 600"
+            >Blood request</a
+          >
+          <i id="bar" class="fas fa-outdent"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="container mt-4">
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %}
+      <div>
+        {% for category, message in messages %}
+        <div
+          class="alert alert-{{ category }} alert-dismissible fade show"
+          role="alert"
+        >
+          {{ message }}
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %} {% endwith %}
+    </div>
+
+    <main id="donation-main">
+      <h1 id="donation-header">Blood Request</h1>
+
+      <section id="cart">
+        <table width="100%">
+          <thead>
+            <tr>
+              <td>ID</td>
+              <td>Blood Group</td>
+              <td>Units</td>
+              <td>Reason</td>
+              <td>Status</td>
+            </tr>
+          </thead>
+          <tbody>
+            {% for request in request_details%}
+            <tr>
+              <td>{{ request['ID'] }}</td>
+              <td>{{ request['blood_group'] }}</td>
+              <td>{{ request['units'] }}</td>
+              <td>{{ request['reason'] }}</td>
+              <td>{{ request['status'] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <button
+      class="submit-btn"
+      type="submit"
+      id="add"
+      onclick="window.location.href='{{ url_for('b_request') }}'"
+    >
+      Requsest Blood
+    </button>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

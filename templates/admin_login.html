@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Donation</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div id="nav-logo-box">
+          <a href="#"
+            ><img
+              src="{{ url_for('static', filename='image/logo.jpg') }}"
+              class="nav-logo"
+              alt=""
+          /></a>
+        </div>
+        <div>
+          <ul id="nav-list">
+            <li><a class="active" href="{{ url_for('admin_login') }}">Admin Login</a></li>
+            <li><a href="{{ url_for('index') }}">Log in</a></li>
+            <li><a href="{{ url_for('signin') }}">sign in</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- login -->
+    <main>
+      <div id="login-page">
+        <div class="login-container">
+          <img
+            src="{{ url_for('static', filename='image/blood_image.png') }}"
+            alt="Blood Donation Logo"
+          />
+
+          <h3>Login to Admin Account</h3>
+          <form action="/admin_login" method="POST">
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" name="name" required/>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" name="password" required/>
+            </div>
+
+            <button type="submit" class="login-btn">LOGIN</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
