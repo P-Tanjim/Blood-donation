@@ -53,12 +53,11 @@ A web-based platform built with **Flask**, **MySQL**, **HTML**, **CSS**, and **J
 
 ## Donation Form
 > Form to register a blood donation.
-<img width="1920" height="1239" alt="screencapture-localhost-5000-request-blood-2025-07-20-07_15_16" src="https://github.com/user-attachments/assets/24db0127-bb6b-4f3c-afe8-6681d39a273f" />
+<img width="1920" height="1288" alt="screencapture-localhost-5000-donate-blood-2025-07-20-07_16_44" src="https://github.com/user-attachments/assets/21d8b197-36ea-4a81-874c-b5d8ac2ef826" />
 
 ## Blood Request Form
 > Form to request blood in emergencies.
-<img width="1920" height="1288" alt="screencapture-localhost-5000-donate-blood-2025-07-20-07_16_44" src="https://github.com/user-attachments/assets/21d8b197-36ea-4a81-874c-b5d8ac2ef826" />
-
+<img width="1920" height="1239" alt="screencapture-localhost-5000-request-blood-2025-07-20-07_15_16" src="https://github.com/user-attachments/assets/24db0127-bb6b-4f3c-afe8-6681d39a273f" />
 
 ### Admin Features
 
