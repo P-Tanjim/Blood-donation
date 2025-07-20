@@ -35,17 +35,25 @@ A web-based platform built with **Flask**, **MySQL**, **HTML**, **CSS**, and **J
 
 ### User
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/eedf7d81-3b1c-494a-ac52-f56553450ce8" />
+People can see how much blood is available
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/a6cd2240-3009-4d89-b7d2-d7f3a88230ab" />
+Users can make a donation request
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/73062049-05e7-4839-9316-3673ec60ef7d" />
+Users can request blood
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/a5d33247-3b89-48e2-bb05-e21ed9b13356" />
+Everyone can view and add events
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/fbc0f35a-e68d-4a88-b07f-be2b350cadbf" />
+Blood Donation Form
 <img width="1920" height="1239" alt="screencapture-localhost-5000-request-blood-2025-07-20-07_15_16" src="https://github.com/user-attachments/assets/24db0127-bb6b-4f3c-afe8-6681d39a273f" />
+Blood Request Form
 <img width="1920" height="1288" alt="screencapture-localhost-5000-donate-blood-2025-07-20-07_16_44" src="https://github.com/user-attachments/assets/21d8b197-36ea-4a81-874c-b5d8ac2ef826" />
 
 
 ### Admin
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/96b6ee6c-b743-464a-81c4-dd22e3477c00" />
+Donation Request Status
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/298891fd-6671-4228-8abe-767e7a258536" />
+Blood Request Status
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d8b44e0f-cb8e-47b2-8db2-bfdda0d17bdc" />
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/7d6f5708-b9cc-4d10-9128-d9e9c99f0377" />
 
