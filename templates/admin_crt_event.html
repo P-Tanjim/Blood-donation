@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blood Donation Event - Register to save lives!"
+    />
+    <title>Blood Donation Event</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/event.css') }}">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="navbar">
+        <div id="nav-logo-box">
+          <a href="#"><img src="{{ url_for('static', filename='image/logo.jpg') }}" class="nav-logo" alt="" /></a>
+        </div>
+        <div>
+          <ul id="account-list">
+            <li><a href="{{ url_for('admin_user') }}">Home</a></li>
+            <li><a href="{{ url_for('admin') }}">Donations</a></li>
+            <li><a href="{{ url_for('admin_2') }}" >Blood requests</a></li>
+            <li><a href="{{ url_for('admin_event') }}" class="active">Event</a></li>
+            <li><a href="{{ url_for('index') }}">Log out</a></li>
+            <a href="#" id="close"><i class="fas fa-times"></i></a>
+          </ul>
+        </div>
+        <div id="mobile">
+          <a
+            href="{{ url_for('event') }}"
+            style="text-decoration: none; color: red; font-weight: 600"
+            >Events</a
+          >
+          <i id="bar" class="fas fa-outdent"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <h1>Blood Donation Event</h1>
+      <form action="/admin_crt_event" method="POST">
+        <div>
+          <label for="name">Full Name <span style="color: red">*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div>
+          <label for="email">Email <span style="color: red">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          />
+        </div>
+        <div>
+          <label for="number"
+            >Phone Number <span style="color: red">*</span></label
+          >
+          <input
+            type="number"
+            id="number"
+            name="number"
+            placeholder="Enter your phone number"
+            pattern="[0-9]{10}"
+            required
+          />
+        </div>
+        <div>
+          <label for="event_id"
+            >Event ID <span style="color: red">*</span></label
+          >
+          <input
+            type="text"
+            id="event_id"
+            name="event_id"
+            placeholder="Enter the event ID"
+            required
+          />
+        </div>
+        <div>
+          <label for="address">Address <span style="color: red">*</span></label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Enter your address"
+            required
+          />
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Additional information"
+            rows="5"
+          ></textarea>
+        </div>
+        <div>
+          <label for="date">Event start</label>
+          <input type="date" id="date" name="start_date" required />
+        </div>
+        <div>
+          <label for="date">Event end</label>
+          <input type="date" id="date" name="end_date" required />
+        </div>
+        <button type="submit">Register Now</button>
+      </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
