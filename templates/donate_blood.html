@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Donation</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="navbar">
+        <div id="nav-logo-box">
+          <a href="#"><img src="{{ url_for('static', filename='image/logo.jpg') }}" class="nav-logo" alt="" /></a>
+        </div>
+        <div>
+          <ul id="account-list">
+            <li><a href="{{ url_for('user') }}">Home</a></li>
+            <li><a href="{{ url_for('donate_user') }}" class="active">Donate</a></li>
+            <li><a href="{{ url_for('Request') }}" >Blood request</a></li>
+            <li><a href="{{ url_for('event') }}" >Event</a></li>
+            <li><a href="{{ url_for('index') }}">Log out</a></li>
+            <a href="#" id="close"><i class="fas fa-times"></i></a>
+          </ul>
+        </div>
+        <div id="mobile">
+          <a
+            href="{{ url_for('donate') }}"
+            style="text-decoration: none; color: red; font-weight: 600"
+            >Donation</a
+          >
+          <i id="bar" class="fas fa-outdent"></i>
+        </div>
+      </div>
+    </header>
+    <div class="container mt-4">
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %}
+      <div>
+        {% for category, message in messages %}
+        <div
+          class="alert alert-{{ category }} alert-dismissible fade show"
+          role="alert"
+        >
+          {{ message }}
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %} {% endwith %}
+    <!-- Donation Form Container -->
+    <main id="main">
+      <div class="form-container">
+        <h1>Donate Blood</h1>
+        <p>Fill in the details below to record your blood donation.</p>
+        <form method="POST" action="/donate_blood">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="full_name"
+              name="full_name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="text" id="age" placeholder="Donor age" name="age" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Enter your address"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="donor-id">Donor ID</label>
+            <input type="text" id="donor-id" name="donor_id" placeholder="Donor ID" required />
+          </div>
+          <div class="form-group">
+            <label for="blood-group">Blood Group</label>
+            <select id="blood-group" name="blood_group" required>
+              <option value="" disabled selected>
+                Select your blood group
+              </option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="units">Units Donated</label>
+            <input type="number" id="units" placeholder="Enter Unit" name="donated_units" required />
+          </div>
+          <div class="form-group">
+            <label for="date">Last date of Donation</label>
+            <input type="date" id="date" name="date_of_donation" required />
+          </div>
+          <div class="form-group">
+            <label for="donation-id">Donation ID</label>
+            <input
+              type="text"
+              id="donation-id"
+              placeholder="Donation ID"
+              name="donation_id"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="blood bank">Blood Bank:</label>
+            <select id="blood-bank" name="blood_bank" required>
+              <option value="" disabled selected>Select blood bank</option>
+              <option value="RCB">Bangladesh Red Crescent Blood Bank</option>
+              <option value="SD">SANDHANI</option>
+              <option value="BB">Badhan Blood Bank</option>
+              <option value="MC">Medicine Club</option>
+              <option value="AB&TC">
+                Alif Blood Bank & Transfusion Center
+              </option>
+              <option value="IB">Islami Bank Hospital Blood Bank</option>
+              <option value="MB">Maliha Blood Bank</option>
+              <option value="QB">Quantum Blood Bank</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-btn">Submit Donation</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
